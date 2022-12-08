@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual o país?</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            font: normal 1em arial;
+            
+            background-color: gainsboro;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        h1{
+            background-color: grey;
+            color: white;
+            padding: 20px;
+            width: 100vw;
+            text-align: center;
+        }
+        p{
+            font-size: 1.5em;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-color: white;
+            margin: 0px;
+            width: 70vw;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.144);
+        }
+        #txtpais{
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        #result{
+            margin: 20px;
+            width: 300px;
+            height: 50px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.144);
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body id="capa">
+    <h1 >Qual o país?</h1>
+
+   <div id="container">
+       <p>Qual país você nasceu?</p>
+       
+       <input type="text" name="txtpais" id="txtpais"> <br>       
+       <input type="button" value="Enviar País" id="enviar" onclick="enviar()">
+   </div>
+
+
+
+
+    <div id="result">
+    </div>
+
+<script>
+    function enviar(){
+
+        var pais = window.document.querySelector('#txtpais')
+        var result = window.document.querySelector('div#result')
+        var capa = window.document.querySelector('body#capa')
+
+        result.innerHTML = `Você nasceu no país <strong>${pais.value}</strong>`
+        
+        if(pais.value == 'Brasil'){
+
+            result.innerHTML += `<br> Você é Brasileiro!`
+            result.style.height='100px'
+            result.style.color='green'
+            capa.style.backgroundImage='url(../aula11/imagens/realistic-shot-of-the-waving-flag-of-brazil-with-interesting-textures.jpg)'
+            capa.style.backgroundPosition='center center'
+            capa.style.backgroundRepeat='no-repeat'
+            
+            capa.style.backgroundSize='100vh'
+
+        }else{
+            result.innerHTML += `<br> Você é Estrangeiro!`
+            result.style.height='100px'    
+            result.style.color='Black'     
+            
+        }
+    }
+</script>
+
+</body>
+</html>
