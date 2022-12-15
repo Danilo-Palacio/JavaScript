@@ -4,11 +4,15 @@
     // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
+
+        
+
         {
             "type": "msedge",
             "request": "launch",
-            "name": "Open ex001.html",
-            "file": "c:\\Users\\danil\\Desktop\\estudos\\JavaScript\\aula04\\ex001.html"
+            "name": "Open ambiente.js",
+            "file": "c:\\Users\\danil\\Desktop\\estudos\\JavaScript\\aula16\\ambiente.js"
         }
     ]
 }
